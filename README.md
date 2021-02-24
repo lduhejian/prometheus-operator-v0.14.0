@@ -1,3 +1,7 @@
+**学习《每天五分钟玩转Kubernetes》期间，
+修改 prometheus-operator:v0.14.0 以在 kubernetes:v1.20.4 安装，
+不过最终还是没有成功，
+浏览器无法连接。**
 # Prometheus Operator
 [![Build Status](https://jenkins-monitoring-public.prod.coreos.systems/buildStatus/icon?job=po-tests-master&build=1)](https://jenkins-monitoring-public.prod.coreos.systems/job/po-tests-master/1/)
 [![Go Report Card](https://goreportcard.com/badge/coreos/prometheus-operator "Go Report Card")](https://goreportcard.com/report/coreos/prometheus-operator)
