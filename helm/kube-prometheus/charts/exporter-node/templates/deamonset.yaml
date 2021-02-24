@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   labels:
@@ -9,6 +9,11 @@ metadata:
     release: {{ .Release.Name }}
   name: {{ template "fullname" . }}
 spec:
+  selector:
+    matchLabels:
+      app: {{ template "fullname" . }}
+      component: node-exporter
+      release: {{ .Release.Name }}
   template:
     metadata:
       labels:

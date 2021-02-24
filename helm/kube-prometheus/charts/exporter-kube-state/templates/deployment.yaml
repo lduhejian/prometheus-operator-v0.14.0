@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "fullname" . }}
@@ -20,6 +20,9 @@ spec:
   selector:
     matchLabels:
       app: {{ template "fullname" . }}
+      component: kube-state
+      release: {{ .Release.Name }}
+      version: "{{ .Values.kube_state_metrics.image.tag }}"
   template:
     metadata:
       labels:
